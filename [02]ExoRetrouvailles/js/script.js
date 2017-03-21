@@ -23,7 +23,7 @@ function init(infos){
     nom.innerHTML = infos.name;
 
     //Reglage du bouton
-    bouton.innerHTML = 'Retrouvailles';
+    bouton.innerHTML = 'One piece';
     bouton.onclick = dialogue;
 
     //Ajout des classes sur paroles
@@ -55,10 +55,44 @@ function dialogue(){
   if ( index%2 == 0 ) {
     var contexte = document.getElementById('character_02');
     var paroles = data.perso_1.texte;
+
   }else{
     var contexte = document.getElementById('character_01');
     var paroles = data.perso_0.texte;
   }
+
+  if ( index == 5) {
+    var image = data.perso_0.picture02
+    var luffy  = document.getElementById('character_01').getElementsByTagName('img')
+
+    var image2 = data.perso_1.picture02
+    var zorro  = document.getElementById('character_02').getElementsByTagName('img')
+
+    luffy[0].src = image[0];
+
+    setTimeout( function(){
+      luffy[0].src = image[1]
+
+      setTimeout(function(){
+        zorro[0].src = image2[0];
+      }, 6500)
+      setTimeout(function(){
+        zorro[0].src = image2[1];
+      }, 7300)
+
+
+    }, 3000)
+   }
+
+   if ( index == 6) {
+     var image = data.perso_1.picture02
+     var zorro  = document.getElementById('character_02').getElementsByTagName('img')
+
+     zorro[0].src = image[0];
+  //    setTimeout( function(){
+  //      zorro[0].src = image[1] }, 1500)
+  }
+
   var dom = contexte.getElementsByClassName('center'); //--> Renvoie un tableau
   dom[0].innerHTML = paroles[ index%3 ];
   index++;
