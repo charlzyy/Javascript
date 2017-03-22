@@ -1,0 +1,133 @@
+body{
+background-image: url(../img/images.jpg);
+background-size: cover;
+animation-name:backMove;
+animation-duration:1s;
+animation-iteration-count: infinite;
+animation-timing-function: linear;
+}
+@keyframes backMove {
+  0%{
+    background-postion-x : 0;
+    }
+  100%{
+    background-position-x : 100%;
+  }
+}
+.run{
+  background-image: url('../img/OP1.jpg');
+  height: 500px;
+  width: 500px;
+  background-size : 254px auto;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  /*background-size: cover;*/
+  animation-name: run;
+  animation-duration: 0.4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes run {
+  0%{
+    background-image: url('../img/OP1.jpg');
+  }
+  25%{
+    background-image: url('../img/OP02.jpg');
+    background-size : 254px auto;
+  }
+  50%{
+    background-image: url('../img/OP3.jpg');
+    background-size : 253px auto;
+
+  }
+  75%{
+    background-image: url('../img/OP4.jpg');
+    background-size : 248px auto;
+
+  }
+ }
+
+.contour{
+  background-color: purple;
+  height:500px;
+  width: 500px;
+  border-radius: 5px 10px 7px 15px;
+  animation-name: border;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+
+}
+
+@keyframes border{
+  0%{
+    border-radius: 20%  82% 70%  35%;
+  }
+  25%{
+    border-radius: 25% 30% 70%  39%;
+  }
+  50%{
+    border-radius: 30%  79% 48% 35%;
+  }
+  75%{
+    border-radius: 29%  80% 87% 25%;
+  }
+}
+
+.jump{
+    background-image: url('../img/OP5saut.jpg');
+    background-size : 254px auto;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    /*background-size: cover;*/
+    animation-name: jump;
+    animation-duration: 0.7s;
+    animation-iteration-count: infinite;
+
+}
+#Onepiece div {
+  background-position: bottom;
+  background-repeat: no-repeat;
+  height: 500px;
+  width: 500px;
+}
+@keyframes jump {
+  0%{
+    background-image: url('../img/OP5saut.jpg');
+    bottom:0;
+  }
+  25%{
+    background-image: url('../img/OP6saut.jpg');
+    background-size : 254px auto;
+  }
+  50%{
+    background-image: url('../img/OP7saut.jpg');
+    background-size : 253px auto;
+    bottom:200px;
+  }
+  75%{
+    background-image: url('../img/OP8saut.jpg');
+    background-size : 248px auto;
+  }
+  100%{
+    bottom:0;
+  }
+ }
+ .coup{
+   background-image: url('../img/OPGOMU00.jpg');
+   background-size : 254px auto;
+   background-repeat: no-repeat;
+   background-position: bottom left;
+   /*background-size: cover;*/
+   animation-name: coup;
+   animation-duration: 1s;
+   animation-iteration-count: infinite;
+ }
+ @keyframes coup {
+   30%{
+     background-image: url('../img/OPGOMU00.jpg');
+   }
+   70%{
+     background-image: url('../img/OPGOMU01.jpg');
+     background-size : 254px auto;
+   }
+  }
